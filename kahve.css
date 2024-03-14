@@ -1,0 +1,395 @@
+/*natural sayfa düzeni*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color: rgb(255, 174, 0);
+  --manropeFontFamily: "Manrope", sans-serif;
+  --courgetteFontFamily: "Courgette", cursive;
+}
+::-webkit-scrollbar {
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color);
+  border-radius: 2rem;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: default;
+}
+
+section {
+  padding: 2rem 0;
+}
+
+section a,
+section p {
+  font-family: var(--manropeFontFamily);
+}
+
+.informative-button {
+  display: inline-block;
+  text-align: center;
+  background-color: var(--color);
+  color: white;
+  transition: all 0.6s;
+}
+
+.container {
+  padding: 5rem 20rem;
+}
+
+.card {
+  display: inline-block;
+}
+
+.section-icon {
+  height: 15rem;
+  background-image: url("./images/kahve-icon.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.section-h1 {
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 6rem;
+  font-family: var(--courgetteFontFamily);
+}
+/*navbar css kodları*/
+nav.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem 10rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.363);
+  background-color: white;
+}
+
+.navbar #menu-button {
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.navbar #menu-button i {
+  font-size: 3rem;
+}
+
+.logo img {
+  display: block;
+  width: 6rem;
+  height: 6rem;
+}
+
+.navbar-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-list-item {
+  margin: 0 2rem;
+}
+
+.navbar-list-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  font-family: var(--manropeFontFamily);
+  color: var(--color);
+  padding: 1rem 3rem;
+  border-radius: 4rem;
+  transition: all 0.6s;
+}
+
+.navbar-list-item a:hover,
+.navbar-list-item.active a {
+  color: white;
+  background-color: var(--color);
+}
+/*header css kodları*/
+.header {
+  position: relative;
+  margin-top: 9.2rem;
+  width: 100%;
+  aspect-ratio: 8/3;
+  background-image: url("./images/header-image.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.header-box {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  width: 60rem;
+  border: 1px solid black;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: aliceblue;
+}
+
+.header-box h2 {
+  padding: 1rem 2rem;
+  text-align: center;
+  font-family: var(--courgetteFontFamily);
+  font-size: 4.8rem;
+}
+.header-box p {
+  text-align: justify;
+  text-align-last: center;
+  padding: 1rem 4rem;
+  font-size: 1.6rem;
+  line-height: 24px;
+}
+
+.header-box a {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.9rem;
+  padding: 1rem 2rem;
+}
+
+.header-box a:hover {
+  background-color: brown;
+}
+/*section #presentation css kodları*/
+#presentation .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#presentation .container .card {
+  width: 50%;
+}
+
+#presentation .container .content {
+  padding: 2rem;
+  padding-left: 4rem;
+}
+#presentation .container .content h2 {
+  text-align: justify;
+  font-size: 4.2rem;
+  font-family: var(--courgetteFontFamily);
+  padding: 1rem 0;
+}
+#presentation .container .content p {
+  font-size: 2rem;
+  opacity: 0.7;
+  padding: 1rem 0 3rem;
+}
+#presentation .container .content a {
+  font-size: 2rem;
+  padding: 1rem 3rem;
+  transition: all 0.6s;
+}
+#presentation .container .content a:hover {
+  background-color: brown;
+}
+#presentation .container .bg-image {
+  height: 50rem;
+  background-image: url("./images/bankta-oturan-kadin.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+/*section our-facility css kodları*/
+#our-facility .card {
+  width: 25%;
+  font-family: var(--manropeFontFamily);
+}
+
+#our-facility .card .resim {
+  height: 18rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#our-facility .card h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  padding: 1rem 2rem;
+}
+#our-facility .card p {
+  padding: 2rem;
+  font-size: 1.3rem;
+  line-height: 24px;
+  text-align: justify;
+  text-align-last: center;
+  opacity: 0.8;
+}
+/*section our-menu css kodları*/
+#our-menu .card {
+  width: calc(100% / 3);
+  padding: 2rem;
+}
+#our-menu .card .resim {
+  height: 20rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#our-menu .card h2 {
+  text-align: center;
+  padding: 2rem;
+  font-size: 2rem;
+  font-family: var(--manropeFontFamily);
+  opacity: 0.7;
+}
+/*section #our-gallery css kodları*/
+#our-gallery .container .card {
+  width: calc(100% / 3);
+  padding: 2rem;
+}
+
+#our-gallery .container .card .resim {
+  width: 100%;
+  height: 30rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.582);
+  transform: scale(0.9);
+  opacity: 0.7;
+  transition: all 0.6s;
+}
+
+#our-gallery .container .card .resim:hover {
+  transform: scale(1);
+  opacity: 1;
+}
+/*section #our-team css kodları*/
+#our-team .container .card {
+  width: calc(100% / 3);
+  padding: 2rem;
+}
+#our-team .container .card .resim {
+  width: 100%;
+  height: 40rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#our-team .container .card h2 {
+  text-align: center;
+  padding: 2rem;
+  font-size: 2.4rem;
+  opacity: 0.7;
+}
+
+/**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/
+@media (max-width: 1340px) {
+  html {
+    font-size: 9px;
+  }
+  .navbar-list {
+    position: fixed;
+    top: 9.2rem;
+    right: 0;
+    width: 40rem;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.377);
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: all 0.6s;
+  }
+  .navbar-list .navbar-list-item {
+    margin: 1rem;
+  }
+
+  .navbar #menu-button {
+    display: flex;
+  }
+
+  #our-facility .card {
+    width: 50%;
+  }
+  #our-menu .card {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1130px) {
+  html {
+    font-size: 8px;
+  }
+
+  #our-gallery .container .card {
+    width: 50%;
+  }
+
+  #our-team .container .card {
+    width: 50%;
+  }
+}
+
+.navbar-list-active {
+  transform: translateX(0);
+}
+
+@media (max-width: 890px) {
+  .container {
+    padding: 4rem;
+  }
+  #presentation .container {
+    display: block;
+  }
+  #presentation .container .card {
+    width: 100%;
+  }
+
+  #our-facility .container .card {
+    width: 100%;
+  }
+
+  #our-menu .container .card {
+    width: 100%;
+  }
+
+  #our-gallery .container .card {
+    width: 100%;
+  }
+  #our-team .container .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .header .header-box {
+    padding: 0rem;
+    width: 50rem;
+  }
+
+  .container {
+    padding: 3rem;
+  }
+}
